@@ -1,0 +1,17 @@
+version: 0.2
+ 
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn clean install 
+artifacts:
+  files:
+    - bestdeals-services/bestdeals-request-processor/target/bestdeals-request-processor-1.0-SNAPSHOT.jar
+    - bestdeals-services/bestdeals-gateway/target/bestdeals-gateway-1.0-SNAPSHOT.jar
+    - bestdeals-services/bestdeals-eureka/target/bestdeals-eureka-1.0-SNAPSHOT.jar
+    - Procfile
+  discard-paths: no

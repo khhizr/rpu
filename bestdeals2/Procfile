@@ -1,0 +1,3 @@
+eureka: java -jar bestdeals-services/bestdeals-eureka/target/bestdeals-eureka-1.0-SNAPSHOT.jar
+web: java -jar bestdeals-services/bestdeals-gateway/target/bestdeals-gateway-1.0-SNAPSHOT.jar
+requestprocessor: java -jar bestdeals-services/bestdeals-request-processor/target/bestdeals-request-processor-1.0-SNAPSHOT.jar

@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  title: Request RPU to get deals on a product
+  description: API for making request to RPU to find the deals on a particular product
+  contact:
+    name: Price Deals lister
+  version: 1.0.0
+
+servers:
+  - url: http://pricedealslister
+
+paths:
+
+  # Request RPU for deals on Products
+
+  /request-api/getdeals:
+
+
+    parameters:
+      - in: query
+        name: productName
+        example: "I Phone 10"
+        schema:
+          type: string
+        required: true
+      - in: query
+        name : productCategory
+        example: "electronics"
+        schema:
+          type: string
+        required: true
+
+    get:
+
+      description: request the Rpu to get best deals on a particular product
+
+
+      responses:
+        200:
+          description: successfully posted query
+        308:
+          description: query transferred succeffully
+
+        400:
+          description: Request Error
+        401:
+          description: unauthorized
+        403:
+          description: forbidden
+        404:
+          description: Not Found
+

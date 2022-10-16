@@ -1,0 +1,35 @@
+//Index on productname
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "productname": [
+        {
+          "foldDiacritics": false,
+          "maxGrams": 7,
+          "minGrams": 2,
+          "tokenization": "edgeGram",
+          "type": "autocomplete"
+        }
+      ]
+    }
+  }
+}
+// index on category
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "category": [
+        {
+          "foldDiacritics": false,
+          "maxGrams": 7,
+          "minGrams": 2,
+          "tokenization": "edgeGram",
+          "type": "autocomplete"
+        }
+      ]
+    }
+  }
+}
+
